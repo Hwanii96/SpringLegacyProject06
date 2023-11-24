@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- new 키워드 대신에 bean 태그를 사용 해서 객체화를 할 수 있다. -->
+    <!-- constructor-arg 태그를 사용 해서 생성자 주입을 할 수 있다. -->
+    <!-- ref 속성은 사용자 정의 타입 일 때 사용 한다. -->
+    <!-- value 속성은 원시 타입 일 때 사용 한다. -->
+
+    <bean class="GalaxyPhone" id="galaxyPhone">
+        <constructor-arg ref="galaxyWatch"/>
+        <constructor-arg value="GalaxyPhone Test Message !"/>
+    </bean>
+    <bean class="GalaxyWatch" id="galaxyWatch"/>
+    <bean class="IPhone" id="iPhone"/>
+    <bean class="AppleWatch" id="appleWatch"/>
+
+</beans>
